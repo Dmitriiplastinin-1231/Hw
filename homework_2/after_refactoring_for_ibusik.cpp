@@ -23,22 +23,22 @@ int main()
     int sa{0}, sb{0}, sc{0};
 
     // First sequence
-    cout << "pervaja posledovatelnost" << endl;
+    cout << "Первая последовательнсть" << endl;
     fillArr(a, sa);
-    
-    cout << "srednee pervoy posledovatelnocty =" << 1.0 * sa / 10 << endl;
+
+    cout << "Среднее первой последовательности = " << 1.0 * sa / 10 << endl;
 
     // Second sequence
-    cout << "vtoraja posledovatelnost" << endl;
+    cout << "Вторая последовательность" << endl;
     fillArr(b, sb);
 
-    cout << "srednee vtoroy posledovatelnocty =" << 1.0 * sb / 10 << endl;
+    cout << "Среднее второй последовательности = " << 1.0 * sb / 10 << endl;
 
     // Third sequencesa
-    cout << "tretja posledovatelnost" << endl;
+    cout << "Третья последовательность" << endl;
     fillArr(c, sc);
 
-    cout << "srednee tretjey posledovatelnocty =" << 1.0 * sc / 10 << endl;
+    cout << "Среднее третьей последовательности = " << 1.0 * sc / 10 << endl;
 
 
     return 0;
