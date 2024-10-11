@@ -1,9 +1,14 @@
 #include <iostream>
 #include <cmath>
 
-void fillArr (int* arr, int& sum) 
+// hpp
+void fillArr (int*, int&);
+int main();
+
+// cpp
+void fillArr (int* arr, int& sum, int size) 
 {
-    for (int i = 0; i < 10; i++)
+    for (int i = 0; i < size; i++)
     {
         arr[i] = rand() % 10;
         std::cout << arr[i];
@@ -17,26 +22,28 @@ void fillArr (int* arr, int& sum)
 int main()
 {
     // State
-    int a[10], b[10], c[10];
-    int sa{0}, sb{0}, sc{0};
+    const int arraySize = 10;
+
+    int arrA[arraySize], arrB[arraySize], arrC[arraySize];
+    int sumArrA{0}, sumArrB{0}, sumArrC{0};
 
     // First sequence
     std::cout << "Первая последовательнсть" << std::endl;
-    fillArr(a, sa);
+    fillArr(arrA, sumArrA, arraySize);
 
-    std::cout << "Среднее первой последовательности = " << 1.0 * sa / 10 << std::endl;
+    std::cout << "Среднее первой последовательности = " << 1.0 * sumArrA / arraySize << std::endl;
 
     // Second sequence
     std::cout << "Вторая последовательность" << std::endl;
-    fillArr(b, sb);
+    fillArr(arrB, sumArrB, arraySize);
 
-    std::cout << "Среднее второй последовательности = " << 1.0 * sb / 10 << std::endl;
+    std::cout << "Среднее второй последовательности = " << 1.0 * sumArrB / arraySize << std::endl;
 
     // Third sequencesa
     std::cout << "Третья последовательность" << std::endl;
-    fillArr(c, sc);
+    fillArr(arrC, sumArrC, arraySize);
 
-    std::cout << "Среднее третьей последовательности = " << 1.0 * sc / 10 << std::endl;
+    std::cout << "Среднее третьей последовательности = " << 1.0 * sumArrC / arraySize << std::endl;
 
 
     return 0;
