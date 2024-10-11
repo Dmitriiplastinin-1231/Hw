@@ -12,6 +12,8 @@ void fillArr (int* arr, int& sum)
         cout << ' ';
         sum = sum + arr[i];
     }
+
+    cout << ' ' << endl;
 }
 
 int main()
@@ -24,21 +26,18 @@ int main()
     cout << "pervaja posledovatelnost" << endl;
     fillArr(a, sa);
     
-    cout << ' ' << endl;
     cout << "srednee pervoy posledovatelnocty =" << 1.0 * sa / 10 << endl;
 
     // Second sequence
     cout << "vtoraja posledovatelnost" << endl;
     fillArr(b, sb);
 
-    cout << ' ' << endl;
     cout << "srednee vtoroy posledovatelnocty =" << 1.0 * sb / 10 << endl;
 
     // Third sequencesa
     cout << "tretja posledovatelnost" << endl;
     fillArr(c, sc);
 
-    cout << ' ' << endl;
     cout << "srednee tretjey posledovatelnocty =" << 1.0 * sc / 10 << endl;
 
 
