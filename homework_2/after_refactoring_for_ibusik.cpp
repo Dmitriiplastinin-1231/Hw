@@ -1,19 +1,17 @@
 #include <iostream>
 #include <cmath>
 
-using namespace std;
-
 void fillArr (int* arr, int& sum) 
 {
     for (int i = 0; i < 10; i++)
     {
         arr[i] = rand() % 10;
-        cout << arr[i];
-        cout << ' ';
+        std::cout << arr[i];
+        std::cout << ' ';
         sum = sum + arr[i];
     }
 
-    cout << ' ' << endl;
+    std::cout << ' ' << std::endl;
 }
 
 int main()
@@ -23,22 +21,22 @@ int main()
     int sa{0}, sb{0}, sc{0};
 
     // First sequence
-    cout << "Первая последовательнсть" << endl;
+    std::cout << "Первая последовательнсть" << std::endl;
     fillArr(a, sa);
 
-    cout << "Среднее первой последовательности = " << 1.0 * sa / 10 << endl;
+    std::cout << "Среднее первой последовательности = " << 1.0 * sa / 10 << std::endl;
 
     // Second sequence
-    cout << "Вторая последовательность" << endl;
+    std::cout << "Вторая последовательность" << std::endl;
     fillArr(b, sb);
 
-    cout << "Среднее второй последовательности = " << 1.0 * sb / 10 << endl;
+    std::cout << "Среднее второй последовательности = " << 1.0 * sb / 10 << std::endl;
 
     // Third sequencesa
-    cout << "Третья последовательность" << endl;
+    std::cout << "Третья последовательность" << std::endl;
     fillArr(c, sc);
 
-    cout << "Среднее третьей последовательности = " << 1.0 * sc / 10 << endl;
+    std::cout << "Среднее третьей последовательности = " << 1.0 * sc / 10 << std::endl;
 
 
     return 0;
