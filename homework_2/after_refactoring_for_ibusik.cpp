@@ -1,49 +1,63 @@
 #include <iostream>
-#include <cmath>
+#include <string>
 
 // hpp
-void fillArr (int*, int&);
+void fillArr (int* arr, int& sum, const int size);
+void printArr (const int* const arr, const int size);
+float midNum (const int sumArr, const int arraySize);
 int main();
 
+
 // cpp
-void fillArr (int* arr, int& sum, int size) 
+void fillArr (int* arr, int& sum, const int size) 
 {
     for (int i = 0; i < size; i++)
     {
         arr[i] = rand() % 10;
-        std::cout << arr[i];
-        std::cout << ' ';
         sum = sum + arr[i];
     }
+}
 
+void printArr (const int* const arr, const int size) 
+{
+    static char format = ' ';
+    for (int i = 0; i < size; i++)
+    {
+        std::cout << arr[i];
+        std::cout << format;
+    }
     std::cout << ' ' << std::endl;
 }
+
+float midNum (const int sumArr, const int arraySize) 
+{
+    return (1.0 * sumArr / arraySize);
+}
+
+void procSequence (const std::string text1, const std::string text2, const int arraySize) 
+{
+    int arr[arraySize];
+    int sumArr{0};
+
+    std::cout << text1 << " последоваетельность:" << std::endl;
+    fillArr(arr, sumArr, arraySize);
+    printArr(arr, arraySize);
+
+    std::cout 
+        << "Среднее " << text2 << " последовательности = " 
+        << midNum(sumArr, arraySize) 
+        << std::endl;
+}
+
 
 int main()
 {
     // State
     const int arraySize = 10;
 
-    int arrA[arraySize], arrB[arraySize], arrC[arraySize];
-    int sumArrA{0}, sumArrB{0}, sumArrC{0};
-
-    // First sequence
-    std::cout << "Первая последовательнсть" << std::endl;
-    fillArr(arrA, sumArrA, arraySize);
-
-    std::cout << "Среднее первой последовательности = " << 1.0 * sumArrA / arraySize << std::endl;
-
-    // Second sequence
-    std::cout << "Вторая последовательность" << std::endl;
-    fillArr(arrB, sumArrB, arraySize);
-
-    std::cout << "Среднее второй последовательности = " << 1.0 * sumArrB / arraySize << std::endl;
-
-    // Third sequencesa
-    std::cout << "Третья последовательность" << std::endl;
-    fillArr(arrC, sumArrC, arraySize);
-
-    std::cout << "Среднее третьей последовательности = " << 1.0 * sumArrC / arraySize << std::endl;
+    procSequence("Первая", "первой", arraySize);
+    procSequence("Вторая", "второй", arraySize);
+    procSequence("Третья", "третьей", arraySize);
 
 
     return 0;
