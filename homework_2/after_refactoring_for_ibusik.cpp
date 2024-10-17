@@ -1,5 +1,4 @@
 #include <iostream>
-#include <cmath>
 
 // hpp
 void fillArr (int*, int&);
