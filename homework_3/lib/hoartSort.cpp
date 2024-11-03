@@ -4,6 +4,10 @@
 
 namespace hoart
 {
+    static int __partOfSort(int* arr, int l, int r);
+    static void __hoartSort(int* arr, int l, int r);
+
+
     void sort(int* arr, const int size) 
     {
         __hoartSort(arr, 0, size-1);
