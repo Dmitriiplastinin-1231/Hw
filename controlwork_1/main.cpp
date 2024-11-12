@@ -11,17 +11,17 @@ int main()
 
     std::cout << "Вывод массива: ";
     const char format = ' ';
-    for (int i: data)
+    for (int num : data)
     {
-        if (i < min)
+        if (num < min)
         {
-            min = i;
-        } else if (i > max)
+            min = num;
+        } else if (num > max)
         {
-            max = i;
+            max = num;
         }
 
-        std::cout << i << format;
+        std::cout << num << format;
     }
 
 
